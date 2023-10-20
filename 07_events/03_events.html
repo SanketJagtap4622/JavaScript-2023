@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Js</title>
+</head>
+
+<body>
+    <h1>Hello World | JS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // const sayHello = function(name){
+    //     console.log(`Hello ${name}`);
+    // }
+
+    // setInterval(function(){
+    //     console.log("Hello", Date.now());
+    // }, 1000)
+
+    // const stopIt = setInterval(sayHello, 1000, "Sanket")
+
+    // clearInterval(stopIt)
+    
+    let stopIt;
+    document.querySelector('#start').addEventListener('click', function () {
+        stopIt = setInterval(function () {
+            console.log("Hello World")
+        }, 1000)
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(stopIt)
+    })
+
+
+
+</script>
+
+</html>

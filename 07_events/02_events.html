@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Js</title>
+</head>
+<body>
+    <!-- setTimeout, clearTimeout -->
+    <h1>Hello World</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // const sayHello = function(){
+    //     console.log("Hello");
+    // }
+
+    // setTimeout(sayHello, 2000)
+
+    // setTimeout(function(){
+    //     console.log("HELLO WORLD");
+    // }, 2000)
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Good Morning"
+    }
+
+    const stopIt = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(stopIt)
+        console.log("Stopped");
+    })
+
+</script>
+</html>
